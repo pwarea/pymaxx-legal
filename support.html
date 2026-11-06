@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support - Pymaxx</title>
+  <meta name="description" content="Get help with Pymaxx for iPhone and iPad: how to contact support, what to include in a report, and answers to common questions.">
+  <link rel="canonical" href="https://pwarea.github.io/pymaxx-legal/support.html">
+  <link rel="alternate" hreflang="en" href="https://pwarea.github.io/pymaxx-legal/support.html">
+  <link rel="alternate" hreflang="tr" href="https://pwarea.github.io/pymaxx-legal/tr/support.html">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">Pymaxx</a>
+      <nav class="languages" aria-label="Language">
+        <a href="support.html" hreflang="en" lang="en" aria-current="page">English</a>
+        <a href="tr/support.html" hreflang="tr" lang="tr">Türkçe</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Support</h1>
+      <p class="subtitle">Help with Pymaxx for iPhone and iPad.</p>
+
+      <article>
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>Email <a href="mailto:voids.pager-9w@icloud.com?subject=Pymaxx%20Support">voids.pager-9w@icloud.com</a>. Questions, bug reports, feedback and privacy requests all go to this address. In the app, you can find it under Settings → Support, with a Copy address button.</p>
+          <p><a class="support-button" href="mailto:voids.pager-9w@icloud.com?subject=Pymaxx%20Support&amp;body=Device%20model%3A%0D%0AiOS%20or%20iPadOS%20version%3A%0D%0APymaxx%20version%3A%0D%0A%0D%0AWhat%20happened%3A%0D%0A%0D%0ASteps%20to%20reproduce%3A%0D%0A">Email Pymaxx support</a></p>
+        </section>
+
+        <section id="report">
+          <h2>What to include</h2>
+          <p>A complete report saves a lot of back and forth. Please include:</p>
+          <ul>
+            <li>your device model;</li>
+            <li>your iOS or iPadOS version;</li>
+            <li>the Pymaxx version, as shown in the App Store;</li>
+            <li>what you did, what you expected and what happened instead;</li>
+            <li>the steps to make it happen again;</li>
+            <li>for a problem with running code, the error message from the console and a short code sample that shows the problem.</li>
+          </ul>
+          <p>Please do not send API keys, passwords or code you want to keep private. A small test snippet written just to show the problem is almost always enough.</p>
+        </section>
+
+        <section id="privacy">
+          <h2>Privacy requests</h2>
+          <p>For privacy questions and requests, you can use the subject "Pymaxx Privacy". Pymaxx keeps your data on your device, so you can handle most requests yourself in the app. See <a href="privacy.html#deleting">Controlling and deleting your data</a> in the Privacy Policy.</p>
+        </section>
+
+        <section id="security">
+          <h2>Security problems</h2>
+          <p>If you think you have found a security problem, please email us at the address above instead of posting the details publicly.</p>
+        </section>
+
+        <section id="faq">
+          <h2>Common questions</h2>
+
+          <h3 id="offline">Does Pymaxx work offline?</h3>
+          <p>Yes. Python, JavaScript, TypeScript, SQL and all bundled libraries are part of the app, so nothing needs to be downloaded before you run code. You only need a connection to download a local AI model or to use an external AI provider. Downloaded models and Apple's on-device model work offline. A file kept only in iCloud may be unavailable until iCloud can download it.</p>
+
+          <h3 id="storage">Where are my projects stored?</h3>
+          <p>On your device, in the app's own storage. If you opened a project from the Files app, saving writes back to the original file, and iCloud or another provider may sync it. Deleting Pymaxx removes its own storage, but not originals in Files or iCloud and not files you exported.</p>
+
+          <h3 id="delete-project">How do I delete a project?</h3>
+          <p>Choose Move to trash. The project goes to Recently deleted, where you can restore it or choose Permanently delete. Permanent deletion also removes the project's Local Git repository and the photos in its chats.</p>
+
+          <h3 id="delete-model">How do I delete a downloaded model?</h3>
+          <p>Go to Settings → Network &amp; AI → Local AI models and delete the model.</p>
+
+          <h3 id="remove-key">How do I remove an API key?</h3>
+          <p>Go to Settings → Network &amp; AI → API profiles and delete the profile. This removes the key from the iOS Keychain. Do this before you uninstall the app, because removing the app may not clear Keychain data.</p>
+
+          <h3 id="run">Why won't my file run?</h3>
+          <p>Check these first:</p>
+          <ul>
+            <li>Pymaxx runs Python, JavaScript, TypeScript and SQL files.</li>
+            <li>Python can import only the libraries that come with the app, including NumPy, Matplotlib, Pillow, pandas, SymPy, NetworkX, SciPy, scikit-learn and pytest. <code>pip</code> and <code>micropip</code> are not available, and Pymaxx cannot install packages. If a project contains a <code>pymaxx-packages.json</code> file, Pymaxx keeps it as an ordinary file and does not install anything listed in it.</li>
+            <li>JavaScript and TypeScript can import only <code>.js</code>, <code>.mjs</code> and <code>.ts</code> files from the same project. npm packages, Node APIs and imports from URLs do not work.</li>
+            <li>Subprocesses, shell commands, raw sockets, local servers, full threading and virtual environments are not available, and neither are native extension packages other than the ones that come with the app.</li>
+            <li>Pymaxx gives your code no internet access.</li>
+            <li>Very large files and projects can reach the app's size limits. When that happens, the app tells you which limit was reached.</li>
+            <li>SQL runs against a new, empty SQLite database every time, so create the tables you need in the same file.</li>
+          </ul>
+          <p>If it still fails, send us the console message and a short example.</p>
+
+          <h3 id="generated">My Python code wrote a file. Where is it?</h3>
+          <p>Python runs on a temporary copy of the project. Files your code writes appear in Generated files. Choose Save to project there to keep them.</p>
+
+          <h3 id="ai-upload">Does the AI assistant send my code anywhere?</h3>
+          <p>Not with on-device models. With an external provider, only after you turn on network access, the profile passes its connection test and you allow sharing for that project and profile. From then on, each message you send goes to the provider together with any photos you attached, recent messages from the chat and the files checked in Context. The <a href="privacy.html#leaving">Privacy Policy</a> has the details.</p>
+
+          <h3 id="stop-sharing">How do I stop sending data to a provider?</h3>
+          <p>Withdraw the permission in the chat's sharing details, or turn off Allow network access in Settings → Network &amp; AI. Content the provider already received stays with that provider, so ask the provider if you want it deleted.</p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <nav aria-label="Documents">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+      <p>Contact: <a href="mailto:voids.pager-9w@icloud.com">voids.pager-9w@icloud.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>

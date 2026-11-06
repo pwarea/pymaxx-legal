@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - Pymaxx</title>
+  <meta name="description" content="How Pymaxx for iPhone and iPad handles your data: what stays on your device, what is sent, when and to whom, and how to delete it.">
+  <link rel="canonical" href="https://pwarea.github.io/pymaxx-legal/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://pwarea.github.io/pymaxx-legal/privacy.html">
+  <link rel="alternate" hreflang="tr" href="https://pwarea.github.io/pymaxx-legal/tr/privacy.html">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">Pymaxx</a>
+      <nav class="languages" aria-label="Language">
+        <a href="privacy.html" hreflang="en" lang="en" aria-current="page">English</a>
+        <a href="tr/privacy.html" hreflang="tr" lang="tr">Türkçe</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated <time datetime="2026-11-04">November 4, 2026</time></p>
+
+      <article>
+        <div class="intro">
+          <p>This policy covers Pymaxx, a code editor for iPhone and iPad, as distributed through the App Store. In this policy, "we" and "us" mean the developer shown on Pymaxx's App Store product page (listed there as the seller).</p>
+          <p>Pymaxx does not use accounts, ads or analytics, and we do not run any server that receives your data. Your projects, chats and settings stay on your device. Pymaxx itself only connects to the internet after you turn on network access, and then only when you download a local AI model or send a request to an AI provider you set up with your own API key.</p>
+        </div>
+
+        <section id="responsible">
+          <h2>1. Data controller and contact</h2>
+          <p>The data controller is the developer who provides the app and is shown on its App Store product page. You can reach us at <a href="mailto:voids.pager-9w@icloud.com?subject=Pymaxx%20Privacy">voids.pager-9w@icloud.com</a>. The same address is in the app under Settings → Support.</p>
+        </section>
+
+        <section id="collection">
+          <h2>2. What we collect</h2>
+          <p>The app collects nothing. Pymaxx has no account system, advertising, analytics, telemetry, third-party crash reporting or remote configuration, and there is no developer server for the app to send data to. The privacy manifest included in the app declares no data collection and no tracking, and Settings → Network &amp; AI shows Pymaxx telemetry as None. The only information that can reach us is an email you choose to send (section 13) and the Apple diagnostics and statistics described below.</p>
+          <p>We do not sell your data, use it for advertising or track you across apps and websites.</p>
+          <p>If you have chosen in your Apple settings to share diagnostics with app developers, Apple may make crash reports and aggregated App Store statistics available to us. Apple handles this according to your settings and its own privacy policy. It is not a feature of Pymaxx.</p>
+        </section>
+
+        <section id="on-device">
+          <h2>3. What is stored on your device</h2>
+          <p>Pymaxx keeps the following in the app's own storage on your iPhone or iPad. Projects you open from the Files app are also saved back to their original location (see section 4):</p>
+          <ul>
+            <li>your projects: files, folders, version history and Recently deleted (the trash);</li>
+            <li>Local Git repositories, including the author name, email address and commit messages you type;</li>
+            <li>AI chats, drafts, which files you checked in Context, each project's Ask before changes or Always accept changes setting, and the undo records for AI edits;</li>
+            <li>photos you attach to AI chats, kept in a separate local store;</li>
+            <li>settings such as theme, colors, editor options, language, layout, keyboard shortcuts and whether network access is on;</li>
+            <li>the sharing permissions you give for AI providers (these records contain no API key and no message content);</li>
+            <li>records of AI requests in progress, and a small inbox where an answer from a provider waits until the app saves it to the chat (the inbox never holds API keys);</li>
+            <li>local AI models you downloaded;</li>
+            <li>damaged records found while converting data saved by an older version, and a temporary recovery copy kept during that conversion;</li>
+            <li>access bookmarks for files and folders you opened through the Files app (they let Pymaxx open them again), and recovery records that protect your saves to those files.</li>
+          </ul>
+          <p>API profiles (name, provider, model, API key and whether the connection was verified) are stored in the iOS Keychain as device-only items. They are not synced to iCloud Keychain and can only be read while the device is unlocked. Once a key is saved, it is never shown in the profile list or passed to the editor, your code or the chat.</p>
+          <p>Console output is kept in memory only. It is not saved with your projects or their history.</p>
+          <p>Your device backup may include Pymaxx's local data, depending on your iOS backup settings. Downloaded models, the AI answer inbox and the Files access bookmarks are excluded from backups.</p>
+          <p>In the Files app, Pymaxx's Documents folder appears as a folder named Pymaxx under On My iPhone or On My iPad.</p>
+        </section>
+
+        <section id="leaving">
+          <h2>4. What leaves your device, and when</h2>
+          <p>Pymaxx's own internet use is controlled by one switch: Allow network access, in Settings → Network &amp; AI. It is off when you first install the app, and while it is off the app neither downloads models nor contacts AI providers. Turning it on does not send anything by itself: data goes out only when you do one of the things described below. The setting is remembered, so once you turn it on it stays on the next time you open the app.</p>
+          <p>Turning network access off cancels pending model downloads and AI requests. Anything already sent cannot be taken back.</p>
+
+          <h3>Downloading a local AI model</h3>
+          <p>A model is downloaded only when you tap Download next to it in Settings → Network &amp; AI → Local AI models while network access is on. Pymaxx then downloads the model file from Hugging Face over HTTPS, and the download only ever goes to these hosts, redirects included: <code>huggingface.co</code>, <code>cdn-lfs.huggingface.co</code>, <code>cas-bridge.xethub.hf.co</code>, <code>us.aws.cdn.hf.co</code> and <code>us.gcp.cdn.hf.co</code>.</p>
+          <p>The request asks for the model file and nothing else. It contains no project, code, chat, credentials or usage data, and no cookies are used. Like any web server, Hugging Face can see connection details such as your IP address and which model you downloaded, and its own privacy policy applies to that. Each file is checked against a fixed SHA-256 checksum before it is used. A model file is data the app reads to generate answers on your device. It is not program code.</p>
+          <p>The app has to stay open while a model downloads. If you leave the app, the download stops.</p>
+
+          <h3>Using an external AI provider</h3>
+          <p>You can add an API profile for OpenAI, Anthropic, Google Gemini, DeepSeek, xAI, Mistral, Groq or OpenRouter, using an API key from your own account with that provider. A chat message is sent to a provider only when all of the following are true:</p>
+          <ul>
+            <li>network access is on;</li>
+            <li>the profile has been verified;</li>
+            <li>you have allowed sharing for this project and this profile (sharing is off by default);</li>
+            <li>you send the message yourself.</li>
+          </ul>
+          <p>A sharing permission covers only that project and that profile. If you change the provider, the model or the key, or if the sharing notice shown with the permission is updated, the app asks again. You can withdraw the permission at any time in the chat's sharing details.</p>
+          <p>When you send a message, the provider receives what it needs to answer it: your message, any photos you attached, some recent messages from the current chat (with their photos, if the model accepts photos) and the files checked in Context. For each of those files, this includes its content, its path in the project, its programming language and an internal file ID. The file you have open starts out checked, and you can uncheck it before sending.</p>
+          <p>Your API key is sent only to that provider, to authenticate the request. Requests go over HTTPS to a fixed address for each provider. Redirects are refused and no cookies are kept. Nothing passes through a server of ours on the way.</p>
+          <p>A connection test sends a short, fixed test prompt with no project or chat content. The provider may charge for it. Saving a profile sends nothing.</p>
+          <p>If the provider replies that it is busy or that a rate limit was reached, Pymaxx may send the same request up to two more times while the app is open. Switching to another app while an answer is on its way does not lose it: the request may still finish in the background, and the answer is saved to the chat when you come back.</p>
+          <p>OpenRouter passes your request on to the model provider you picked there, so the policies of both OpenRouter and that provider apply.</p>
+          <p>Pymaxx does not share your data with any third party on its own. Data goes to Hugging Face or an AI provider only when you start it, and an AI provider receives it under your own account with that provider. Before you send the first message to a provider from a project, the app shows what will be sent to that provider and asks for your permission.</p>
+          <p>How long a provider keeps your data and what it does with it is set by that provider's own terms and privacy policy, not by us. To delete something a provider has already received, use that provider's privacy controls. Withdrawing permission or deleting the chat in Pymaxx does not remove it from the provider.</p>
+
+          <h3>Photos in AI chats</h3>
+          <p>You choose the photos yourself in the iOS photo picker, or paste one from the clipboard. Pymaxx does not need access to your photo library for this, does not scan it and has no camera access. You can attach up to four photos to a message. When you attach a photo, the app resizes it and saves a new JPEG or PNG copy, so EXIF data such as GPS location is not carried over. What the picture itself shows does not change, so check it before you send. Photos are uploaded only when you send a message to an external provider's model that accepts photos. On-device models receive text only.</p>
+          <p>The Extract text on device option uses Apple's on-device text recognition. It adds the recognized text to your draft and sends nothing.</p>
+
+          <h3>On-device AI</h3>
+          <p>Pymaxx can also run an AI model on the device itself: either a model you downloaded (run through llama.cpp) or, where Apple Intelligence is available, Apple's on-device Foundation Models. Both work with network access off and never switch to an external provider on their own. They receive only your message, recent messages from the chat and the files checked in Context, and nothing leaves the device.</p>
+          <p>These models cannot run code or create, delete or rename files. They can only suggest new contents for files that are already in Context. Each project starts with Ask before changes, so you review every change. You can switch a project to Always accept changes if you prefer.</p>
+
+          <h3>Files, iCloud and sharing</h3>
+          <p>When you open a file or folder through the Files picker, Pymaxx gets access to that item only (for a folder, that includes what is inside it). It cannot see the rest of your device or all of your iCloud Drive, and it does not keep any storage of its own in iCloud. Saving a project that lives in Files writes the change back to the original file. If that location is in iCloud Drive or another cloud provider, the provider may sync it on its own, whether or not Pymaxx's network access is on. You control that through your device or provider settings.</p>
+          <p>Removing a saved location from Pymaxx hides its link. It does not revoke the access you granted or delete the original files, and its access bookmark and recovery records may remain on the device.</p>
+          <p>You can export project ZIP files (without AI chats and photos), Local Git ZIP backups, console text and plot images. Sharing, exporting and copying only happen when you start them, and the app or service that receives the content handles it under its own terms.</p>
+
+          <h3>Apple services</h3>
+          <p>Apple handles App Store downloads under its own terms and privacy policy. As described in section 2, Apple may share crash reports and aggregated App Store statistics with us if your Apple settings allow it. iCloud Drive and any other file provider you use follow their own policies. Apple's Foundation Models and on-device text recognition run on your device, through iOS.</p>
+
+          <h3>Your code and Local Git</h3>
+          <p>Python, JavaScript, TypeScript and SQL run on the device. Your code and its output are not uploaded anywhere, and Pymaxx gives your code no internet access. Python works on a temporary copy of your project, and files your code writes are kept only if you choose Save to project in Generated files.</p>
+          <p>Pymaxx cannot download, install or update Python packages. Every Python library it can use comes with the app.</p>
+          <p>Local Git has no remote. It cannot fetch, push or pull, and your commits and branches stay on the device.</p>
+        </section>
+
+        <section id="purposes">
+          <h2>5. Purposes and legal bases</h2>
+          <p>Where data protection law applies, the processing on your device and the transfers described in section 4 happen only to provide a feature you asked for: downloading the model you chose, or sending your message to the provider you chose so it can answer it. The basis for this is your request and, for sharing with an AI provider, the permission you give in the app. You can withdraw that permission at any time (section 4). This stops further sending but does not undo what was already sent.</p>
+          <p>If you email us, we handle your message to answer your request, to keep the app and its users secure, and to deal with legal claims and obligations.</p>
+        </section>
+
+        <section id="permissions">
+          <h2>6. Permissions the app asks for</h2>
+          <p>Pymaxx does not ask for access to your camera, microphone, location or contacts, and it does not send push notifications. If you share a plot image and choose Save Image in the share sheet, iOS asks whether Pymaxx may add photos to your library. That permission only lets Pymaxx add images. It does not let the app see the photos already in your library.</p>
+        </section>
+
+        <section id="retention">
+          <h2>7. How long data is kept</h2>
+          <p>The app's data stays on your device until you delete it or remove the app, and none of it is kept by us.</p>
+          <p>Some features keep older copies on purpose. Version history, Recently deleted, AI undo records and Git commits can still contain text you later removed from a file. The Clear history action removes older versions but leaves Git commits alone. Permanently deleting a project also deletes its Git repository and its photos. A deleted chat can remain in older project versions until you clear history or permanently delete the project.</p>
+          <p>When an app update converts data saved by an older version, Pymaxx may keep a temporary recovery copy. It is deleted automatically once the converted data has been checked. An AI answer waiting in the inbox is kept until it is saved to the chat.</p>
+          <p>Data that a provider or service received from you is kept according to its own policy. How long we keep emails you send us is explained in section 13.</p>
+        </section>
+
+        <section id="deleting">
+          <h2>8. Controlling and deleting your data</h2>
+          <ul>
+            <li>Project: choose Move to trash. The project goes to Recently deleted, where you can restore it or choose Permanently delete.</li>
+            <li>Older versions: use Clear history. It keeps the current version and removes the older ones.</li>
+            <li>Chat: use Delete chat.</li>
+            <li>API key: go to Settings → Network &amp; AI → API profiles and delete the profile. This removes the key from the iOS Keychain. Do this before you remove the app, because uninstalling may not clear Keychain data.</li>
+            <li>Local model: go to Settings → Network &amp; AI → Local AI models and delete the model.</li>
+            <li>AI sharing: withdraw the permission in the chat's sharing details, or turn off network access.</li>
+            <li>Damaged data found while converting older data: use its own Permanently delete action. You will be asked to confirm.</li>
+          </ul>
+          <p>Removing the app deletes its storage on the device. It does not delete files you exported, originals in Files or iCloud, copies held by AI providers, or device backups. These actions delete the app's records, but they do not guarantee a secure erase of the underlying storage.</p>
+          <p>For emails you sent us, see section 13. For data an AI provider has already received, contact that provider.</p>
+        </section>
+
+        <section id="security">
+          <h2>9. Security</h2>
+          <p>Most of the protection comes from your data staying on your device, where iOS security applies. In addition, Pymaxx:</p>
+          <ul>
+            <li>keeps API keys in the Keychain as device-only items that are not synced to iCloud;</li>
+            <li>talks to AI providers only over HTTPS at fixed addresses, refuses redirects and keeps no cookies or caches for those connections;</li>
+            <li>downloads models only from the allowed Hugging Face hosts and checks each file's SHA-256 checksum and size;</li>
+            <li>runs your code in a separate environment that keeps no cookies or other web storage and is not given internet access;</li>
+            <li>removes photo metadata by re-encoding photos;</li>
+            <li>checks imported ZIP files and rejects unsafe content, such as files that would end up outside the project folder.</li>
+          </ul>
+          <p>No software is perfectly secure, and we cannot promise that Pymaxx is. If you think you have found a security problem, please email us privately instead of posting it publicly.</p>
+        </section>
+
+        <section id="children">
+          <h2>10. Children</h2>
+          <p>Pymaxx is a general-purpose programming tool. It has no ads, tracking or in-app purchases, and no way to contact other users. The app collects no data from anyone, children included. If you connect an external AI provider, that provider's own terms apply.</p>
+        </section>
+
+        <section id="transfers">
+          <h2>11. International transfers</h2>
+          <p>Because Pymaxx sends us nothing, none of your data is transferred to us in any country. If you choose to download a model or use an external AI provider, the data described in section 4 goes to Hugging Face or to that provider, which may store and process it in other countries under its own safeguards. The same applies to iCloud and other file providers you use, and to the email services that carry any message you send us.</p>
+        </section>
+
+        <section id="rights">
+          <h2>12. Your rights</h2>
+          <p>Depending on where you live, privacy law may give you the right to know what data is held about you, to get a copy of it or receive it in a portable form, to have it corrected or deleted, to object to or restrict its use, to withdraw consent you gave, and to complain to a data protection authority. If you are in Türkiye, you can also use your rights under Article 11 of the Personal Data Protection Law No. 6698 (KVKK).</p>
+          <p>The data Pymaxx handles is on your device and under your control, and we do not have a copy. Section 8 explains how to delete it. You can get a portable copy of your projects by exporting a project ZIP or a Local Git ZIP, and you can withdraw AI sharing permission at any time (section 4). For emails you sent us, write to the address in section 15. For data an AI provider received, use that provider's privacy controls.</p>
+        </section>
+
+        <section id="email">
+          <h2>13. If you email us</h2>
+          <p>If you write to us, we receive your email address, your message and anything you attach. We use them to reply and to deal with your request. We keep them only as long as reasonably needed for that, to keep the app secure, or to deal with legal claims and obligations. You can ask about that correspondence or ask us to delete it at the same address.</p>
+        </section>
+
+        <section id="changes">
+          <h2>14. Changes to this policy</h2>
+          <p>If we change this policy, we will update the date at the top of this page. If a change affects what leaves your device, we will say so in the release notes of the version that brings it.</p>
+        </section>
+
+        <section id="contact">
+          <h2>15. Contact</h2>
+          <p>Send privacy questions and requests about your data to <a href="mailto:voids.pager-9w@icloud.com?subject=Pymaxx%20Privacy">voids.pager-9w@icloud.com</a>. Please do not include API keys, passwords or code you would rather keep private.</p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <nav aria-label="Documents">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <p>Contact: <a href="mailto:voids.pager-9w@icloud.com">voids.pager-9w@icloud.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
