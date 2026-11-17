@@ -22,7 +22,7 @@
 
     <main>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated <time datetime="2026-11-04">November 4, 2026</time></p>
+      <p class="updated">Last updated <time datetime="2026-11-16">November 16, 2026</time></p>
 
       <article>
         <div class="intro">
@@ -60,7 +60,7 @@
           <p>API profiles (name, provider, model, API key and whether the connection was verified) are stored in the iOS Keychain as device-only items. They are not synced to iCloud Keychain and can only be read while the device is unlocked. Once a key is saved, it is never shown in the profile list or passed to the editor, your code or the chat.</p>
           <p>Console output is kept in memory only. It is not saved with your projects or their history.</p>
           <p>Your device backup may include Pymaxx's local data, depending on your iOS backup settings. Downloaded models, the AI answer inbox and the Files access bookmarks are excluded from backups.</p>
-          <p>In the Files app, Pymaxx's Documents folder appears as a folder named Pymaxx under On My iPhone or On My iPad.</p>
+          <p>In the Files app, Pymaxx's Documents folder appears as a folder named Pymaxx under On My iPhone or On My iPad. Each project you create in Pymaxx is a folder inside it.</p>
         </section>
 
         <section id="leaving">
@@ -127,6 +127,7 @@
           <h2>7. How long data is kept</h2>
           <p>The app's data stays on your device until you delete it or remove the app, and none of it is kept by us.</p>
           <p>Some features keep older copies on purpose. Version history, Recently deleted, AI undo records and Git commits can still contain text you later removed from a file. The Clear history action removes older versions but leaves Git commits alone. Permanently deleting a project also deletes its Git repository and its photos. A deleted chat can remain in older project versions until you clear history or permanently delete the project.</p>
+          <p>If a project has a folder in the Files app, deleting the project in Pymaxx, even permanently, keeps that folder; delete it in the Files app if you no longer need it. Deleting the folder in the Files app does not delete the history Pymaxx saved for the project; permanently deleting the project in Pymaxx does. If the folder was in On My iPhone (or On My iPad) › Pymaxx, Pymaxx tells you the files are gone and offers Restore files, which puts the latest version back from that history, or Remove from Pymaxx, which moves the project to Recently deleted.</p>
           <p>When an app update converts data saved by an older version, Pymaxx may keep a temporary recovery copy. It is deleted automatically once the converted data has been checked. An AI answer waiting in the inbox is kept until it is saved to the chat.</p>
           <p>Data that a provider or service received from you is kept according to its own policy. How long we keep emails you send us is explained in section 13.</p>
         </section>
@@ -134,7 +135,7 @@
         <section id="deleting">
           <h2>8. Controlling and deleting your data</h2>
           <ul>
-            <li>Project: choose Move to trash. The project goes to Recently deleted, where you can restore it or choose Permanently delete.</li>
+            <li>Project: choose Move to trash. The project goes to Recently deleted, where you can restore it or choose Permanently delete. Its folder in the Files app stays; delete it there.</li>
             <li>Older versions: use Clear history. It keeps the current version and removes the older ones.</li>
             <li>Chat: use Delete chat.</li>
             <li>API key: go to Settings → Network &amp; AI → API profiles and delete the profile. This removes the key from the iOS Keychain. Do this before you remove the app, because uninstalling may not clear Keychain data.</li>

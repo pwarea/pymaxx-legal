@@ -22,7 +22,7 @@
 
     <main>
       <h1>Gizlilik Politikası</h1>
-      <p class="updated">Son güncelleme: <time datetime="2026-11-04">4 Kasım 2026</time></p>
+      <p class="updated">Son güncelleme: <time datetime="2026-11-16">16 Kasım 2026</time></p>
 
       <article>
         <div class="intro">
@@ -60,7 +60,7 @@
           <p>API profilleri (ad, sağlayıcı, model, API anahtarı ve bağlantının doğrulanıp doğrulanmadığı) iOS Anahtar Zinciri'nde yalnızca bu cihaza ait kayıtlar olarak saklanır. iCloud Anahtar Zinciri ile eşzamanlanmaz ve yalnızca cihazın kilidi açıkken okunabilir. Kaydedilen bir anahtar profil listesinde bir daha gösterilmez; editöre, kodunuza veya sohbete de hiçbir zaman aktarılmaz.</p>
           <p>Konsol çıktısı yalnızca bellekte tutulur; projelerinizle veya proje geçmişiyle birlikte kaydedilmez.</p>
           <p>Cihaz yedekleriniz, iOS yedekleme ayarlarınıza bağlı olarak Pymaxx'in yerel verilerini içerebilir. İndirilen modeller, AI yanıt gelen kutusu ve Dosyalar erişim yer imleri yedeklere dahil edilmez.</p>
-          <p>Pymaxx'in Documents klasörü, Dosyalar uygulamasında "iPhone'umda" (iPad'de "iPad'imde") altında Pymaxx adlı bir klasör olarak görünür.</p>
+          <p>Pymaxx'in Documents klasörü, Dosyalar uygulamasında "iPhone'umda" (iPad'de "iPad'imde") altında Pymaxx adlı bir klasör olarak görünür. Pymaxx'te oluşturduğunuz her proje, bu klasörün içinde bir klasördür.</p>
         </section>
 
         <section id="cihazdan-cikanlar">
@@ -127,6 +127,7 @@
           <h2>7. Veriler ne kadar süre saklanır?</h2>
           <p>Uygulamanın verileri, siz silene veya uygulamayı kaldırana kadar cihazınızda kalır; bunların hiçbiri bizde saklanmaz.</p>
           <p>Bazı özellikler, işlevleri gereği eski kopyaları saklar. Sürüm geçmişi, Yakın zamanda silinenler, AI geri alma kayıtları ve Git commit'leri, bir dosyadan sonradan sildiğiniz metni hâlâ içerebilir. Geçmişi temizle komutu eski sürümleri kaldırır ama Git commit'lerine dokunmaz. Projeyi kalıcı olarak silmek, projenin Git deposunu ve fotoğraflarını da siler. Silinen bir sohbet, geçmişi temizleyene veya projeyi kalıcı olarak silene kadar eski proje sürümlerinde kalabilir.</p>
+          <p>Bir projenin Dosyalar uygulamasında klasörü varsa, projeyi Pymaxx'te silmek, kalıcı olarak silmek dahil, bu klasörü yerinde bırakır; artık ihtiyacınız yoksa klasörü Dosyalar uygulamasından silin. Klasörü Dosyalar uygulamasında silmek, Pymaxx'in proje için sakladığı geçmişi silmez; projeyi Pymaxx'te kalıcı olarak silmek ise bu geçmişi de siler. Klasör "iPhone'umda" (iPad'de "iPad'imde") › Pymaxx altındaysa, Pymaxx dosyaların kaldırıldığını söyler ve iki seçenek sunar: Dosyaları geri yükle, son sürümü bu geçmişten geri koyar; Pymaxx'ten kaldır ise projeyi Yakın zamanda silinenler bölümüne taşır.</p>
           <p>Uygulama, eski bir sürümden kalan verileri yeni biçime taşırken (veri geçişi) geçici bir kurtarma kopyası tutabilir. Taşınan veriler doğrulandıktan sonra bu kopya otomatik olarak silinir. Gelen kutusunda bekleyen bir AI yanıtı, sohbete kaydedilene kadar tutulur.</p>
           <p>Sağlayıcıların ve hizmetlerin sizden aldığı veriler, onların kendi politikalarına göre saklanır. Bize gönderdiğiniz e-postaları ne kadar sakladığımız 13. bölümde anlatılır.</p>
         </section>
@@ -134,7 +135,7 @@
         <section id="silme">
           <h2>8. Verilerinizi yönetme ve silme</h2>
           <ul>
-            <li>Proje: Çöpe taşı'yı seçin. Proje Yakın zamanda silinenler bölümüne gider; orada geri yükleyebilir veya Kalıcı olarak sil'i seçebilirsiniz.</li>
+            <li>Proje: Çöpe taşı'yı seçin. Proje Yakın zamanda silinenler bölümüne gider; orada geri yükleyebilir veya Kalıcı olarak sil'i seçebilirsiniz. Projenin Dosyalar uygulamasındaki klasörü yerinde kalır; onu oradan silin.</li>
             <li>Eski sürümler: Geçmişi temizle'yi kullanın; güncel sürüm kalır, eskileri silinir.</li>
             <li>Sohbet: Sohbeti sil'i kullanın.</li>
             <li>API anahtarı: Ayarlar → Ağ ve AI → API profilleri bölümünden profili silin. Bu işlem anahtarı iOS Anahtar Zinciri'nden kaldırır. Uygulamayı kaldırmak Anahtar Zinciri verilerini silmeyebileceği için bunu uygulamayı kaldırmadan önce yapın.</li>

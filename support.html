@@ -62,10 +62,11 @@
           <p>Yes. Python, JavaScript, TypeScript, SQL and all bundled libraries are part of the app, so nothing needs to be downloaded before you run code. You only need a connection to download a local AI model or to use an external AI provider. Downloaded models and Apple's on-device model work offline. A file kept only in iCloud may be unavailable until iCloud can download it.</p>
 
           <h3 id="storage">Where are my projects stored?</h3>
-          <p>On your device, in the app's own storage. If you opened a project from the Files app, saving writes back to the original file, and iCloud or another provider may sync it. Deleting Pymaxx removes its own storage, but not originals in Files or iCloud and not files you exported.</p>
+          <p>On your device. Each project you create in Pymaxx is a folder in On My iPhone (or On My iPad) › Pymaxx in the Files app, and Pymaxx keeps its version history and Recently deleted in the app's own storage. If you opened a project from another place in the Files app, saving writes back to the original file, and iCloud or another provider may sync it. Deleting Pymaxx removes its own storage, including that Pymaxx folder, but not originals elsewhere in Files or iCloud and not files you exported.</p>
 
           <h3 id="delete-project">How do I delete a project?</h3>
-          <p>Choose Move to trash. The project goes to Recently deleted, where you can restore it or choose Permanently delete. Permanent deletion also removes the project's Local Git repository and the photos in its chats.</p>
+          <p>Choose Move to trash. The project goes to Recently deleted, where you can restore it or choose Permanently delete. Permanent deletion also removes the project's history, its Local Git repository and the photos in its chats, but not its folder in the Files app: delete that folder in Files if you no longer need it.</p>
+          <p>If you delete, rename or move a project's folder in On My iPhone (or On My iPad) › Pymaxx in the Files app, Pymaxx tells you when you open the project. If you only renamed or moved it, put it back and open the project again. Otherwise choose Restore files to put the latest version back from Pymaxx's saved history, or Remove from Pymaxx to move the project to Recently deleted.</p>
 
           <h3 id="delete-model">How do I delete a downloaded model?</h3>
           <p>Go to Settings → Network &amp; AI → Local AI models and delete the model.</p>
