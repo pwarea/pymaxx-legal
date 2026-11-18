@@ -22,7 +22,7 @@
 
     <main>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated <time datetime="2026-11-16">November 16, 2026</time></p>
+      <p class="updated">Last updated <time datetime="2026-11-18">November 18, 2026</time></p>
 
       <article>
         <div class="intro">
@@ -85,7 +85,7 @@
           <p>When you send a message, the provider receives what it needs to answer it: your message, any photos you attached, some recent messages from the current chat (with their photos, if the model accepts photos) and the files checked in Context. For each of those files, this includes its content, its path in the project, its programming language and an internal file ID. The file you have open starts out checked, and you can uncheck it before sending.</p>
           <p>Your API key is sent only to that provider, to authenticate the request. Requests go over HTTPS to a fixed address for each provider. Redirects are refused and no cookies are kept. Nothing passes through a server of ours on the way.</p>
           <p>A connection test sends a short, fixed test prompt with no project or chat content. The provider may charge for it. Saving a profile sends nothing.</p>
-          <p>If the provider replies that it is busy or that a rate limit was reached, Pymaxx may send the same request up to two more times while the app is open. Switching to another app while an answer is on its way does not lose it: the request may still finish in the background, and the answer is saved to the chat when you come back.</p>
+          <p>If the provider replies that it is busy or that a rate limit was reached, Pymaxx may send the same request up to two more times while the app is open. Switching to another app while an answer is on its way usually does not stop it: the request can still finish in the background, and the answer is saved to the chat when you come back. If iOS stops Pymaxx first, the chat shows that the answer was interrupted, and Retry response sends a new request.</p>
           <p>OpenRouter passes your request on to the model provider you picked there, so the policies of both OpenRouter and that provider apply.</p>
           <p>Pymaxx does not share your data with any third party on its own. Data goes to Hugging Face or an AI provider only when you start it, and an AI provider receives it under your own account with that provider. Before you send the first message to a provider from a project, the app shows what will be sent to that provider and asks for your permission.</p>
           <p>How long a provider keeps your data and what it does with it is set by that provider's own terms and privacy policy, not by us. To delete something a provider has already received, use that provider's privacy controls. Withdrawing permission or deleting the chat in Pymaxx does not remove it from the provider.</p>
